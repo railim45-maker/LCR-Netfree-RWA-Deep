@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Riservata - Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/privato.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <span class="auth-icon">🔐</span>
+                <h1>Benvenuto</h1>
+                <p>Accedi all'area riservata del progetto</p>
+            </div>
+            
+            <form id="login-form" class="auth-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="La tua email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="La tua password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Accedi</button>
+            </form>
+            
+            <div class="auth-footer">
+                <p>Non hai ancora un account?</p>
+                <a href="#register" id="show-register">Registrati ora →</a>
+            </div>
+        </div>
+        
+        <!-- Register Card (nascosto di default) -->
+        <div class="auth-card" id="register-card" style="display:none;">
+            <div class="auth-header">
+                <span class="auth-icon">📝</span>
+                <h1>Registrati</h1>
+                <p>Entra a far parte della community</p>
+            </div>
+            
+            <form id="register-form" class="auth-form">
+                <div class="form-group">
+                    <label for="reg-name">Nome</label>
+                    <input type="text" id="reg-name" placeholder="Il tuo nome">
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Email</label>
+                    <input type="email" id="reg-email" placeholder="La tua email" required>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Password</label>
+                    <input type="password" id="reg-password" placeholder="Scegli una password" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Registrati</button>
+            </form>
+            
+            <div class="auth-footer">
+                <p>Hai già un account?</p>
+                <a href="#" id="show-login">Accedi →</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/auth.js"></script>
+    <script>
+        // Toggle tra login e registrazione
+        document.getElementById('show-register').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('.auth-card:not(#register-card)').style.display = 'none';
+            document.getElementById('register-card').style.display = 'block';
+        });
+        
+        document.getElementById('show-login').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('register-card').style.display = 'none';
+            document.querySelector('.auth-card:not(#register-card)').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

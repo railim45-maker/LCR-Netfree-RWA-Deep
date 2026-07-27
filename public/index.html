@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una cassetta degli attrezzi per una vita nuova</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <span class="logo-icon">🌳</span>
+                <span class="logo-text">[Nome Progetto]</span>
+            </div>
+            <nav class="nav">
+                <a href="#vision">Visione</a>
+                <a href="#pilastri">I 4 Pilastri</a>
+                <a href="#benessere">Benessere</a>
+                <a href="/privato/" class="btn-nav-accent">🔒 Area Riservata</a>
+            </nav>
+            <button class="menu-mobile" aria-label="Menu">☰</button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="vision">
+        <div class="container hero-inner">
+            <div class="hero-visual">
+                <div class="tree-container">
+                    <!-- Albero SVG animato -->
+                    <svg class="tree-svg" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Tronco -->
+                        <path class="trunk" d="M200 450 L190 350 L210 350 Z" fill="#5a3d2b"/>
+                        <!-- Rami principali -->
+                        <path class="branch-left" d="M195 350 Q150 300 130 250" stroke="#5a3d2b" stroke-width="6" fill="none"/>
+                        <path class="branch-right" d="M205 350 Q250 300 270 250" stroke="#5a3d2b" stroke-width="6" fill="none"/>
+                        <!-- Chioma - cerchi luminosi -->
+                        <circle class="leaf leaf1" cx="130" cy="230" r="40" fill="none" stroke="#c9a84c" stroke-width="2"/>
+                        <circle class="leaf leaf2" cx="270" cy="230" r="40" fill="none" stroke="#c9a84c" stroke-width="2"/>
+                        <circle class="leaf leaf3" cx="200" cy="180" r="50" fill="none" stroke="#c9a84c" stroke-width="2"/>
+                        <circle class="leaf leaf4" cx="160" cy="200" r="35" fill="none" stroke="#c9a84c" stroke-width="2"/>
+                        <circle class="leaf leaf5" cx="240" cy="200" r="35" fill="none" stroke="#c9a84c" stroke-width="2"/>
+                        <!-- Nodi luminosi -->
+                        <circle class="glow glow1" cx="130" cy="230" r="8" fill="#c9a84c">
+                            <animate attributeName="r" values="8;12;8" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle class="glow glow2" cx="270" cy="230" r="8" fill="#c9a84c">
+                            <animate attributeName="r" values="8;14;8" dur="3.5s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle class="glow glow3" cx="200" cy="180" r="10" fill="#c9a84c">
+                            <animate attributeName="r" values="10;16;10" dur="4s" repeatCount="indefinite"/>
+                        </circle>
+                        <!-- Particelle che salgono -->
+                        <circle class="particle particle1" cx="180" cy="300" r="3" fill="#c9a84c" opacity="0">
+                            <animate attributeName="cy" values="300;100" dur="6s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0;0.8;0" dur="6s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle class="particle particle2" cx="220" cy="320" r="2" fill="#c9a84c" opacity="0">
+                            <animate attributeName="cy" values="320;80" dur="7s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0;0.6;0" dur="7s" repeatCount="indefinite"/>
+                        </circle>
+                    </svg>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Una cassetta degli attrezzi<br>per una vita nuova</h1>
+                <p class="hero-subtitle">Non vendiamo nulla.<br>Ti offriamo gli strumenti per costruire la tua libertà.</p>
+                <div class="hero-cta">
+                    <a href="#pilastri" class="btn btn-primary">Scopri il percorso</a>
+                    <a href="/privato/" class="btn btn-secondary">🔒 Area Riservata</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- I 4 PILASTRI -->
+    <section class="pilastri" id="pilastri">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">I 4 Pilastri del progetto</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="pilastri-grid">
+                <div class="pilastro-card">
+                    <div class="pilastro-icon">🏛️</div>
+                    <h3>Tokenizzazione RWA</h3>
+                    <p>Il valore dei beni reali come fondamento stabile della nuova economia.</p>
+                    <a href="/pilastri/tokenizzazione.html" class="link-scopri">Approfondisci →</a>
+                </div>
+                <div class="pilastro-card">
+                    <div class="pilastro-icon">🤝</div>
+                    <h3>Economia del Dono</h3>
+                    <p>Superare la scarsità attraverso la circolazione consapevole del valore.</p>
+                    <a href="/pilastri/economia-dono.html" class="link-scopri">Approfondisci →</a>
+                </div>
+                <div class="pilastro-card">
+                    <div class="pilastro-icon">🌿</div>
+                    <h3>Net Free</h3>
+                    <p>Il modello frattale che genera comunità resilienti e generative.</p>
+                    <a href="/pilastri/net-free.html" class="link-scopri">Approfondisci →</a>
+                </div>
+                <div class="pilastro-card">
+                    <div class="pilastro-icon">🔱</div>
+                    <h3>Autodeterminazione</h3>
+                    <p>La sovranità personale come primo passo verso la libertà collettiva.</p>
+                    <a href="/pilastri/autodeterminazione.html" class="link-scopri">Approfondisci →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENESSERE -->
+    <section class="benessere" id="benessere">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Strumenti per il benessere quotidiano</h2>
+                <p class="section-subtitle">La libertà inizia dal corpo e dalle abitudini di ogni giorno</p>
+            </div>
+            <div class="benessere-grid">
+                <div class="risorsa-card">
+                    <div class="risorsa-icon">🧪</div>
+                    <h4>Alimentazione alcalinizzante</h4>
+                    <p>Come riequilibrare il pH del corpo attraverso scelte alimentari consapevoli.</p>
+                    <a href="/benessere.html#alcalina" class="link-leggi">Leggi →</a>
+                </div>
+                <div class="risorsa-card">
+                    <div class="risorsa-icon">🧘</div>
+                    <h4>Metamedicina</h4>
+                    <p>Il linguaggio del corpo: ascoltare i segnali per una guarigione profonda.</p>
+                    <a href="/benessere.html#metamedicina" class="link-leggi">Leggi →</a>
+                </div>
+                <div class="risorsa-card">
+                    <div class="risorsa-icon">🪥</div>
+                    <h4>Igiene consapevole</h4>
+                    <p>Dentifricio naturale e movimento no-soap per un rapporto autentico con il corpo.</p>
+                    <a href="/benessere.html#igiene" class="link-leggi">Leggi →</a>
+                </div>
+                <div class="risorsa-card">
+                    <div class="risorsa-icon">⚛️</div>
+                    <h4>Fisica quantistica</h4>
+                    <p>La realtà come campo di possibilità: strumenti per abitare la coscienza.</p>
+                    <a href="/benessere.html#quantistica" class="link-leggi">Leggi →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO REGISTER -->
+    <section class="call-to-register">
+        <div class="container">
+            <div class="cta-box">
+                <h3>🌟 Il viaggio continua nell'area riservata</h3>
+                <p>Accedi per scoprire i prospetti analitici, i numeri, i ruoli e prenotare i webinar esclusivi.</p>
+                <div class="cta-buttons">
+                    <a href="/privato/" class="btn btn-primary">Registrati ora</a>
+                    <a href="/privato/" class="btn btn-secondary">Accedi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="logo-icon">🌳</span>
+                    <span class="logo-text">[Nome Progetto]</span>
+                    <p>Una cassetta degli attrezzi per una vita nuova</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#vision">Visione</a>
+                    <a href="#pilastri">Pilastri</a>
+                    <a href="#benessere">Benessere</a>
+                    <a href="/privato/">Area Riservata</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 - Progetto indipendente</p>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

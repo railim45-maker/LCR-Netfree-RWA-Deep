@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Area Riservata</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/privato.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header privato -->
+    <header class="header privato-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <span class="logo-icon">🌳</span>
+                <span class="logo-text">[Nome Progetto]</span>
+            </div>
+            <nav class="nav privato-nav">
+                <a href="/privato/dashboard.html" class="active">📊 Dashboard</a>
+                <a href="/privato/prospetti.html">📈 Prospetti</a>
+                <a href="/privato/ruoli.html">👥 Ruoli</a>
+                <a href="/privato/webinar.html">🎥 Webinar</a>
+                <a href="/privato/documenti.html">📁 Documenti</a>
+                <a href="#" id="logout-btn" class="btn-logout">🚪 Esci</a>
+            </nav>
+            <button class="menu-mobile" aria-label="Menu">☰</button>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <div class="dashboard-welcome">
+                <h1>Ciao, <span id="user-name">Utente</span> 👋</h1>
+                <p>Benvenuto nella tua area personale. Qui puoi gestire la tua partecipazione al progetto.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-icon">🪙</span>
+                    <div class="stat-info">
+                        <span class="stat-label">NFT in portafoglio</span>
+                        <strong class="stat-value">0</strong>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">👤</span>
+                    <div class="stat-info">
+                        <span class="stat-label">Ruolo attivo</span>
+                        <strong class="stat-value">Non assegnato</strong>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">🎥</span>
+                    <div class="stat-info">
+                        <span class="stat-label">Webinar prenotati</span>
+                        <strong class="stat-value">0</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="card next-steps">
+                    <h3>📋 Prossimi passi</h3>
+                    <ul class="step-list">
+                        <li class="step-item">
+                            <span class="step-icon">✅</span>
+                            <span>Completa il tuo profilo</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-icon">🔐</span>
+                            <span>Esplora i prospetti analitici</span>
+                        </li>
+                        <li class="step-item">
+                            <span class="step-icon">📅</span>
+                            <span>Prenota il webinar con Nicole</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card notifications">
+                    <h3>🔔 Notifiche</h3>
+                    <div class="notification-list">
+                        <div class="notification-item">
+                            <span class="notif-dot new"></span>
+                            <p>Nuovo webinar disponibile - 28 Luglio</p>
+                            <span class="notif-time">Oggi</span>
+                        </div>
+                        <div class="notification-item">
+                            <span class="notif-dot"></span>
+                            <p>Aggiornati gli scenari di rendimento</p>
+                            <span class="notif-time">Ieri</span>
+                        </div>
+                        <div class="notification-item">
+                            <span class="notif-dot"></span>
+                            <p>Benvenuto nel progetto! Inizia il tuo percorso</p>
+                            <span class="notif-time">3 giorni fa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/dashboard.js"></script>
+    <script>
+        // Protezione: se non loggato, redirect al login
+        const user = checkAuth();
+        if (user) {
+            document.getElementById('user-name').textContent = user.name || 'Utente';
+        }
+    </script>
+</body>
+</html>

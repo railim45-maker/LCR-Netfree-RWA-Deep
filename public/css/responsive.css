@@ -1,0 +1,122 @@
+/* ========================================
+   RESPONSIVE - MOBILE FIRST
+   ======================================== */
+
+/* Small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 16px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .pilastro-card {
+        padding: 28px 20px;
+    }
+    
+    .risorsa-card {
+        padding: 24px 18px;
+    }
+    
+    .cta-box {
+        padding: 30px 16px;
+    }
+    
+    .cta-box h3 {
+        font-size: 1.4rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* Medium devices (tablets, 576px to 768px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .pilastri-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .benessere-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .pilastro-card:hover {
+        transform: translateY(-12px);
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .hero-title {
+        font-size: 4.5rem;
+    }
+}
+
+/* ========================================
+   UTILITY PER MOBILE
+   ======================================== */
+
+/* Testo più leggibile su mobile */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .pilastro-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .risorsa-card h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Touch-friendly targets */
+@media (hover: none) {
+    .pilastro-card:hover {
+        transform: none;
+    }
+    
+    .btn:hover {
+        transform: none;
+    }
+    
+    .btn-nav-accent:hover {
+        transform: none;
+    }
+}

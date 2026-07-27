@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I 6 Ruoli - Area Riservata</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/privato.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header privato -->
+    <header class="header privato-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <span class="logo-icon">🌳</span>
+                <span class="logo-text">[Nome Progetto]</span>
+            </div>
+            <nav class="nav privato-nav">
+                <a href="/privato/dashboard.html">📊 Dashboard</a>
+                <a href="/privato/prospetti.html">📈 Prospetti</a>
+                <a href="/privato/ruoli.html" class="active">👥 Ruoli</a>
+                <a href="/privato/webinar.html">🎥 Webinar</a>
+                <a href="/privato/documenti.html">📁 Documenti</a>
+                <a href="#" id="logout-btn" class="btn-logout">🚪 Esci</a>
+            </nav>
+            <button class="menu-mobile" aria-label="Menu">☰</button>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <div class="dashboard-welcome">
+                <h1>👥 I 6 ruoli dell'ecosistema</h1>
+                <p>Ogni ruolo ha una funzione specifica e un percorso di crescita dedicato.</p>
+            </div>
+
+            <div class="ruoli-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+                <!-- Ruolo 1 -->
+                <div class="card ruolo-card" style="text-align: center;">
+                    <span style="font-size: 3rem; display: block; margin-bottom: 12px;">🏠</span>
+                    <h3 style="color: var(--primary);">Proprietario</h3>
+                    <p style="color: var(--text-light); font-size: 0.95rem; margin: 12px 0;">Il custode del valore: partecipa con gli asset e guida la comunità locale.</p>
+                    <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 8px 20px;" onclick="alert('📋 Dettagli del ruolo in sviluppo')">Scopri il percorso →</button>
+                </div>
+
+                <!-- Ruolo 2 -->
+                <div class="card ruolo-card" style="text-align: center;">
+                    <span style="font-size: 3rem; display: block; margin-bottom: 12px;">📢</span>
+                    <h3 style="color: var(--primary);">Informatore</h3>
+                    <p style="color: var(--text-light); font-size: 0.95rem; margin: 12px 0;">Diffonde la visione e accompagna le persone nella scoperta del progetto.</p>
+                    <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 8px 20px;" onclick="alert('📋 Dettagli del ruolo in sviluppo')">Scopri il percorso →</button>
+                </div>
+
+                <!-- Ruolo 3 -->
+                <div class="card ruolo-card" style="text-align: center;">
+                    <span style="font-size: 3rem; display: block; margin-bottom: 12px;">🎓</span>
+                    <h3 style="color: var(--primary);">Formatore</h3>
+                    <p style="color: var(--text-light); font-size: 0.95rem; margin: 12px 0;">Forma i nuovi membri e approfondisce la conoscenza dell'ecosistema.</p>
+                    <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 8px 20px;" onclick="alert('📋 Dettagli del ruolo in sviluppo')">Scopri il percorso →</button>
+                </div>
+
+                <!-- Ruolo 4 -->
+                <div class="card ruolo-card" style="text-align: center;">
+                    <span style="font-size: 3rem; display: block; margin-bottom: 12px;">🤝</span>
+                    <h3 style="color: var(--primary);">Sostenitore</h3>
+                    <p style="color: var(--text-light); font-size: 0.95rem; margin: 12px 0;">Supporta il progetto con risorse e competenze, contribuendo alla crescita.</p>
+                    <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 8px 20px;" onclick="alert('📋 Dettagli del ruolo in sviluppo')">Scopri il percorso →</button>
+                </div>
+
+                <!-- Ruolo 5 -->
+                <div class="card ruolo-card" style="text-align: center;">
+                    <span style="font-size: 3rem; display: block; margin-bottom: 12px;">🛠️</span>
+                    <h3 style="color: var(--primary);">Operativo</h3>
+                    <p style="color: var(--text-light); font-size: 0.95rem; margin: 12px 0;">Gestisce le attività operative e la logistica dell'ecosistema.</p>
+                    <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 8px 20px;" onclick="alert('📋 Dettagli del ruolo in sviluppo')">Scopri il percorso →</button>
+                </div>
+
+                <!-- Ruolo 6 -->
+                <div class="card ruolo-card" style="text-align: center;">
+                    <span style="font-size: 3rem; display: block; margin-bottom: 12px;">🌟</span>
+                    <h3 style="color: var(--primary);">Visionario</h3>
+                    <p style="color: var(--text-light); font-size: 0.95rem; margin: 12px 0;">Guida l'evoluzione del progetto con intuizione e lungimiranza strategica.</p>
+                    <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 8px 20px;" onclick="alert('📋 Dettagli del ruolo in sviluppo')">Scopri il percorso →</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/auth.js"></script>
+    <script>
+        // Protezione
+        checkAuth();
+    </script>
+</body>
+</html>

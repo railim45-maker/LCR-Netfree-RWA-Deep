@@ -1,0 +1,12 @@
+{
+  "name": "nome-progetto",
+  "version": "1.0.0",
+  "description": "Una cassetta degli attrezzi per una vita nuova",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}

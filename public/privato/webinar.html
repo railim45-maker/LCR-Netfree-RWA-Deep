@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webinar - Area Riservata</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/privato.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header privato -->
+    <header class="header privato-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <span class="logo-icon">🌳</span>
+                <span class="logo-text">[Nome Progetto]</span>
+            </div>
+            <nav class="nav privato-nav">
+                <a href="/privato/dashboard.html">📊 Dashboard</a>
+                <a href="/privato/prospetti.html">📈 Prospetti</a>
+                <a href="/privato/ruoli.html">👥 Ruoli</a>
+                <a href="/privato/webinar.html" class="active">🎥 Webinar</a>
+                <a href="/privato/documenti.html">📁 Documenti</a>
+                <a href="#" id="logout-btn" class="btn-logout">🚪 Esci</a>
+            </nav>
+            <button class="menu-mobile" aria-label="Menu">☰</button>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <div class="dashboard-welcome">
+                <h1>🎥 Prenota il tuo webinar</h1>
+                <p>Sessioni esclusive con Nicole per approfondire il progetto e rispondere alle tue domande.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                <!-- Calendario -->
+                <div class="card">
+                    <h3>📅 Scegli la data</h3>
+                    <div style="margin-top: 16px;">
+                        <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; text-align: center; font-size: 0.85rem; margin-bottom: 12px;">
+                            <span style="font-weight: 600;">L</span>
+                            <span style="font-weight: 600;">M</span>
+                            <span style="font-weight: 600;">M</span>
+                            <span style="font-weight: 600;">G</span>
+                            <span style="font-weight: 600;">V</span>
+                            <span style="font-weight: 600;">S</span>
+                            <span style="font-weight: 600;">D</span>
+                        </div>
+                        <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; text-align: center;">
+                            <!-- Giorni del mese (esempio Luglio 2026) -->
+                            <span style="color: var(--text-light);">26</span>
+                            <span style="background: var(--accent); color: var(--white); padding: 8px; border-radius: 8px; cursor: pointer; transition: var(--transition);" 
+                                  onclick="selectDate(this)">27</span>
+                            <span style="background: var(--primary); color: var(--white); padding: 8px; border-radius: 8px; cursor: pointer; transition: var(--transition);" 
+                                  onclick="selectDate(this)">28</span>
+                            <span style="padding: 8px; border-radius: 8px; cursor: pointer; transition: var(--transition);" 
+                                  onclick="selectDate(this)">29</span>
+                            <span style="padding: 8px; border-radius: 8px; cursor: pointer; transition: var(--transition);" 
+                                  onclick="selectDate(this)">30</span>
+                            <span style="padding: 8px; border-radius: 8px; cursor: pointer; transition: var(--transition);" 
+                                  onclick="selectDate(this)">31</span>
+                            <span style="color: var(--text-light);">1</span>
+                        </div>
+                        <div style="margin-top: 12px; display: flex; justify-content: space-between;">
+                            <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 6px 16px;">← Luglio</button>
+                            <span style="color: var(--text-light); font-weight: 500;">Luglio 2026</span>
+                            <button class="btn btn-secondary" style="font-size: 0.85rem; padding: 6px 16px;">Agosto →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slot disponibili -->
+                <div class="card">
+                    <h3>🕐 Slot disponibili</h3>
+                    <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 12px;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--light); border-radius: 8px; border-left: 4px solid var(--accent);">
+                            <span>Lunedì 28 - 18:00</span>
+                            <button class="btn btn-primary" style="padding: 6px 16px; font-size: 0.85rem;" onclick="prenotaSlot(this)">Prenota</button>
+                        </div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--light); border-radius: 8px; border-left: 4px solid var(--accent);">
+                            <span>Martedì 29 - 10:00</span>
+                            <button class="btn btn-primary" style="padding: 6px 16px; font-size: 0.85rem;" onclick="prenotaSlot(this)">Prenota</button>
+                        </div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--light); border-radius: 8px; border-left: 4px solid var(--accent);">
+                            <span>Mercoledì 30 - 15:30</span>
+                            <button class="btn btn-primary" style="padding: 6px 16px; font-size: 0.85rem;" onclick="prenotaSlot(this)">Prenota</button>
+                        </div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--light); border-radius: 8px; border-left: 4px solid var(--accent);">
+                            <span>Giovedì 31 - 09:00</span>
+                            <button class="btn btn-primary" style="padding: 6px 16px; font-size: 0.85rem;" onclick="prenotaSlot(this)">Prenota</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Funnel anti-perditempo -->
+            <div style="margin-top: 30px; background: #fff3cd; border: 2px solid #ffc107; padding: 20px 24px; border-radius: var(--radius);">
+                <p style="display: flex; align-items: center; gap: 12px; margin: 0;">
+                    <span style="font-size: 1.5rem;">⚠️</span>
+                    <span style="color: #856404; font-weight: 500;">La prenotazione è impegnativa. Conferma solo se sei certo di partecipare.</span>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/auth.js"></script>
+    <script>
+        // Protezione
+        checkAuth();
+
+        function selectDate(el) {
+            document.querySelectorAll('.calendar-grid span').forEach(s => {
+                s.style.background = 'transparent';
+                s.style.color = 'var(--text)';
+            });
+            el.style.background = 'var(--accent)';
+            el.style.color = 'var(--white)';
+        }
+
+        function prenotaSlot(btn) {
+            if (confirm('Confermi la prenotazione di questo webinar?')) {
+                btn.textContent = '✅ Prenotato';
+                btn.disabled = true;
+                btn.style.background = '#28a745';
+                btn.style.color = 'white';
+                alert('🎉 Webinar prenotato con successo! Riceverai un'email di conferma.');
+            }
+        }
+    </script>
+</body>
+</html>

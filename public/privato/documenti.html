@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documenti - Area Riservata</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/privato.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header privato -->
+    <header class="header privato-header">
+        <div class="container header-inner">
+            <div class="logo">
+                <span class="logo-icon">🌳</span>
+                <span class="logo-text">[Nome Progetto]</span>
+            </div>
+            <nav class="nav privato-nav">
+                <a href="/privato/dashboard.html">📊 Dashboard</a>
+                <a href="/privato/prospetti.html">📈 Prospetti</a>
+                <a href="/privato/ruoli.html">👥 Ruoli</a>
+                <a href="/privato/webinar.html">🎥 Webinar</a>
+                <a href="/privato/documenti.html" class="active">📁 Documenti</a>
+                <a href="#" id="logout-btn" class="btn-logout">🚪 Esci</a>
+            </nav>
+            <button class="menu-mobile" aria-label="Menu">☰</button>
+        </div>
+    </header>
+
+    <main class="dashboard-main">
+        <div class="container">
+            <div class="dashboard-welcome">
+                <h1>📁 Documentazione e link partner</h1>
+                <p>Protocolli tecnici, documenti ufficiali e risorse dei partner.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                <!-- Protocolli tecnici -->
+                <div class="card">
+                    <h3>🔗 Protocolli tecnici</h3>
+                    <ul style="list-style: none; padding: 0; margin-top: 16px;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);">
+                            <a href="#" style="color: var(--primary); text-decoration: none; font-weight: 500;" onclick="alert('📄 Documento in sviluppo')">
+                                📄 Whitepaper tecnico v1.0
+                            </a>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);">
+                            <a href="#" style="color: var(--primary); text-decoration: none; font-weight: 500;" onclick="alert('📄 Documento in sviluppo')">
+                                📄 Specifiche smart contract
+                            </a>
+                        </li>
+                        <li style="padding: 12px 0;">
+                            <a href="#" style="color: var(--primary); text-decoration: none; font-weight: 500;" onclick="alert('📄 Documento in sviluppo')">
+                                📄 Guida all'integrazione
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Partner -->
+                <div class="card">
+                    <h3>🤝 Link partner</h3>
+                    <ul style="list-style: none; padding: 0; margin-top: 16px;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);">
+                            <a href="#" style="color: var(--primary); text-decoration: none; font-weight: 500;" onclick="alert('🌊 Partner Acqua Viva')">
+                                💧 Acqua Viva
+                            </a>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);">
+                            <a href="#" style="color: var(--primary); text-decoration: none; font-weight: 500;" onclick="alert('🌍 Partner Terra')">
+                                🌍 Terra/Microorganismi
+                            </a>
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,0.05);">
+                            <a href="#" style="color: var(--primary); text-decoration: none; font-weight: 500;" onclick="alert('⚡ Partner Energia')">
+                                ⚡ Energia Rinnovabile
+                            </a>
+                        </li>
+                        <li style="padding: 12px 0;">
+                            <a href="#" style="color: var(--primary); text-decoration: none; font-weight: 500;" onclick="alert('🎓 Partner Accademia')">
+                                🎓 Accademia di Formazione
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Documenti ufficiali -->
+            <div class="card" style="margin-top: 24px;">
+                <h3>📋 Documenti ufficiali</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 16px;">
+                    <div style="background: var(--light); padding: 20px; border-radius: 8px; text-align: center;">
+                        <span style="font-size: 2rem; display: block; margin-bottom: 8px;">📜</span>
+                        <h4 style="color: var(--primary); font-size: 1rem;">Statuto</h4>
+                        <button class="btn btn-secondary" style="font-size: 0.8rem; padding: 6px 16px; margin-top: 8px;" onclick="alert('📄 Documento in sviluppo')">Scarica</button>
+                    </div>
+                    <div style="background: var(--light); padding: 20px; border-radius: 8px; text-align: center;">
+                        <span style="font-size: 2rem; display: block; margin-bottom: 8px;">📊</span>
+                        <h4 style="color: var(--primary); font-size: 1rem;">Bilancio</h4>
+                        <button class="btn btn-secondary" style="font-size: 0.8rem; padding: 6px 16px; margin-top: 8px;" onclick="alert('📄 Documento in sviluppo')">Scarica</button>
+                    </div>
+                    <div style="background: var(--light); padding: 20px; border-radius: 8px; text-align: center;">
+                        <span style="font-size: 2rem; display: block; margin-bottom: 8px;">📋</span>
+                        <h4 style="color: var(--primary); font-size: 1rem;">Regolamento</h4>
+                        <button class="btn btn-secondary" style="font-size: 0.8rem; padding: 6px 16px; margin-top: 8px;" onclick="alert('📄 Documento in sviluppo')">Scarica</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/auth.js"></script>
+    <script>
+        // Protezione
+        checkAuth();
+    </script>
+</body>
+</html>
